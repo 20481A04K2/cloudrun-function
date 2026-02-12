@@ -6,9 +6,9 @@ steps:
       - deploy
       - discover-ad-status
       - --source=.
-      - --image=us-east4-docker.pkg.dev/quickads-prod/cloud-run-source-deploy/discover-ad-status
+      - --image=us-east4-docker.pkg.dev/gcp-another-pro/cloud-run-source-deploy/discover-ad-status
       - --region=asia-southeast1
-      - --project=quickads-prod
+      - --project=gcp-another-pro
       - --allow-unauthenticated
       - --memory=512Mi
       - --timeout=300s
