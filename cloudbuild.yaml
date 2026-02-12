@@ -7,7 +7,7 @@ steps:
       - discover-ad-status
       - --gen2
       - --runtime=python311
-      - --region=asia-south1
+      - --region=us-east4
       - --source=.
       - --entry-point=main
       - --trigger-http
@@ -15,7 +15,7 @@ steps:
       - --project=gcp-another-pro
       - --memory=512Mi
       - --timeout=300s
-      - --max-instances=100
+      - --max-instances=2
 
 options:
   logging: CLOUD_LOGGING_ONLY
