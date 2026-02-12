@@ -1,0 +1,21 @@
+steps:
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - functions
+      - deploy
+      - discover-ad-status
+      - --gen2
+      - --runtime=python311
+      - --region=us-east4
+      - --source=.
+      - --entry-point=main
+      - --trigger-http
+      - --allow-unauthenticated
+      - --project=gcp-another-pro
+      - --memory=512Mi
+      - --timeout=300s
+      - --max-instances=100
+
+options:
+  logging: CLOUD_LOGGING_ONLY
