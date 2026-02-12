@@ -6,6 +6,7 @@ steps:
       - deploy
       - discover-ad-status
       - --source=.
+      # This is your exact custom image path
       - --image=us-east4-docker.pkg.dev/gcp-another-pro/cloud-run-source-deploy/discover-ad-status
       - --region=asia-southeast1
       - --project=gcp-another-pro
