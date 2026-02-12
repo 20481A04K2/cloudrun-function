@@ -7,7 +7,7 @@ steps:
       - discover-ad-status
       - --gen2
       - --runtime=python311
-      - --region=us-central1
+      - --region=us-east4
       - --source=.
       - --entry-point=main
       - --trigger-http
@@ -15,7 +15,9 @@ steps:
       - --project=gcp-another-pro
       - --memory=512Mi
       - --timeout=300s
-      - --max-instances=2
+      - --max-instances=0
+      # This flag forces GCF to use your custom repository instead of 'gcf-artifacts'
+      - --docker-repository=projects/gcp-another-pro/locations/us-east4/repositories/cloud-run-source-deploy
 
 options:
   logging: CLOUD_LOGGING_ONLY
