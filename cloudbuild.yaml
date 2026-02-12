@@ -2,23 +2,17 @@ steps:
   - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
     entrypoint: gcloud
     args:
-      - functions
+      - run
       - deploy
       - discover-ad-status
-      - --gen2
-      - --runtime=python311
-      - --region=asia-southeast1
       - --source=.
-      - --entry-point=main
-      - --trigger-http
+      - --image=us-east4-docker.pkg.dev/quickads-prod/cloud-run-source-deploy/discover-ad-status
+      - --region=asia-southeast1
+      - --project=quickads-prod
       - --allow-unauthenticated
-      - --project=gcp-another-pro
       - --memory=512Mi
       - --timeout=300s
       - --max-instances=2
-      - --min-instances=1
-      # IMPORTANT: This tells GCF to use your custom repository instead of gcf-artifacts
-      - --docker-repository=projects/gcp-another-pro/locations/us-east4/repositories/cloud-run-source-deploy
 
 options:
   logging: CLOUD_LOGGING_ONLY
