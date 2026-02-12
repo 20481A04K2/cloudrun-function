@@ -7,7 +7,7 @@ steps:
       - discover-ad-status
       - --gen2
       - --runtime=python311
-      - --region=us-east4
+      - --region=asia-southeast1
       - --source=.
       - --entry-point=main
       - --trigger-http
